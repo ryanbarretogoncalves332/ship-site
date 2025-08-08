@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Site</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <main>
+    <h1>Ship Site</h1>
+    <h4>O seu site de ships</h4>
+
+    <p>Bem-vindo ao Ship Site, onde você pode explorar e compartilhar suas paixões por ships!</p>
+    
+    <div id="ship_txt">
+        <h2>Shipar por nome:</h2>
+        <form action="/ship" method="get">
+            <p>Nome da primeira pessoa:</p>
+            <input type="text" name="ship_name" placeholder="Digite o nome do ship" required>
+            <p>Nome da segunda pessoa:</p>
+            <input type="text" name="ship_name2" placeholder="Digite o nome do segundo ship" required>
+            <button type="submit">Shipar</button>
+    </div>
+        </form>
+        
+        <div id="ship_result">
+            <h2>Resultado do Ship:</h2>
+            <p id="result_text">Aqui aparecerá o resultado do ship.</p>
+        </div>
+
+    
+    <div id="ship_img">
+        <h2>Shipar por imagem:</h2>
+        <form action="/ship_img" method="post" enctype="multipart/form-data">
+            <p>Selecione a imagem do primeiro ship:</p>
+            <input type="file" name="ship_img" accept="image/*" required>
+            <p>Selecione a imagem do segundo ship:</p>
+            <input type="file" name="ship_img2" accept="image/*" required>
+            <button type="submit">Shipar Imagem</button>
+        </form>
+        
+        <div id="img_result">
+            <h2>Resultado do Ship de Imagem:</h2>
+            <p id="img_result_text">Aqui aparecerá o resultado do ship de imagem.</p>
+        </div>
+
+        <script src="script/script.js"></script>
+
+        <footer>
+            <p>&copy; 2025 Ship Site. Todos os direitos reservados.</p>
+            <p>Feito por Ryan Barreto Gonçalves</p>
+        </footer>
+    </div>
+    </main>
+</body>
+</html>
+
