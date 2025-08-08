@@ -20,7 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         let ships = JSON.parse(localStorage.getItem('ships') || '{}');
         let shipResult = ships[key];
 
-        if (!shipResult) {
+        // Ryan e Sophia sempre 100%
+        if (
+            (name1 === 'ryan' && name2 === 'sophia') ||
+            (name1 === 'sophia' && name2 === 'ryan')
+        ) {
+            shipResult = { name1, name2, percent: 100, bonito: 'CASAL PERFEITOOO! 💖' };
+            ships[key] = shipResult;
+            localStorage.setItem('ships', JSON.stringify(ships));
+        } else if (!shipResult) {
             const percent = Math.floor(Math.random() * 91) + 10; // 10-100%
             let bonito = '';
             if (percent < 10) {
